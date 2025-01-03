@@ -250,7 +250,7 @@ const Hero = () => {
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <div className="min-h-screen border-b border-neutral-900 pb-4 lg:mb-35">
+        <div className="border-b border-neutral-900 pb-4 lg:mb-35">
             <div className="flex flex-wrap">
                 {/* Left section: Text content */}
                 <div className="w-full lg:w-1/2 lg:pl-8">
@@ -259,7 +259,7 @@ const Hero = () => {
                             variants={container(0)}
                             initial="hidden"
                             animate="visible"
-                            className="pb-4 text-4xl lg:text-6xl font-bold tracking-tight lg:mt-32 mt-16">
+                            className="pb-4 text-4xl lg:text-6xl font-bold tracking-tight lg:mt-26 mt-10">
                             Emad Mohammed Habibi
                         </motion.h1>
 
@@ -276,7 +276,7 @@ const Hero = () => {
                             variants={container(0.5)}
                             initial="hidden"
                             animate="visible"
-                            className="text-xl lg:text-3xl font-serif tracking-tight -mt-8 mb-2 lg:-mt-8 lg:mb-8 text-center flex-grow">
+                            className="text-xl lg:text-3xl font-serif tracking-tight -mt-10 mb-2 lg:-mt-8 lg:mb-8 text-center flex-grow">
                             <WordAnimation />
                         </motion.div>
 
@@ -285,7 +285,7 @@ const Hero = () => {
                             variants={container(0.75)}
                             initial="hidden"
                             animate="visible"
-                            className="flex justify-center space-x-6 lg:mt-6">
+                            className="flex justify-center space-x-6 lg:mt-2">
                             <a href="https://www.linkedin.com/in/emad-mohammed-habibi-051b28233/" 
                             target="_blank" 
                             rel="noopener noreferrer"
@@ -311,7 +311,7 @@ const Hero = () => {
                             variants={container(1.0)}
                             initial="hidden"
                             animate="visible"
-                            className="flex justify-center space-x-10 mt-6">
+                            className="flex justify-center space-x-10 mt-8">
                             <a
                                 href={resumeImage}
                                 download="Emad_resume.png"  // Custom name for the file being downloaded
@@ -334,7 +334,7 @@ const Hero = () => {
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.75 }}
-                        className="brightness-80 rounded-full w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] mt-16"
+                        className="brightness-80 rounded-full w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] mt-4"
                         src={profilePic} alt="Emad Habibi" />
                 </div>
             </div>
