@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust for navbar height if needed */
+}
+
+/* Center the sections vertically when scrolling to them */
+section {
+  scroll-margin-top: 0px; /* Adjust to ensure the section is centered after scroll */
+}
+
+/* Add some spacing between each section */
+section {
+  padding-top: 50px; /* Optional: Adjust to your liking for spacing between sections */
+  padding-bottom: 80px; /* Optional: Adjust to your liking for spacing between sections */
+}
+
+
+
+/* Navbar link styling for a classy, luxurious look */
+nav a {
+  font-family: 'Playfair Display', serif;  /* Change to classy font */
+  font-weight: 300;                       /* A bolder font weight for elegance */
+  font-size: 1.3rem;                        /* Smaller font size */
+  letter-spacing: 2px;                    /* Add slight letter spacing for refinement */
+  color: #FFFFFF;                         /* White color for text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+nav a:hover {
+  color: #F4A300;  /* Gold color on hover for a luxurious feel */
+  transform: translateY(-3px);  /* Slight hover effect for sophistication */
+}
+
+
+/* Apply Playfair Display font to section headings for a luxurious feel */
+section h2, section h3 {
+  font-family: 'Playfair Display', serif;  /* Classy font for section headings */
+  font-weight: 100;                       /* Lighter weight for elegance */
+  font-size: 2rem;                        /* Adjusted font size for better section title visibility */
+  letter-spacing: 1.5px;                  /* Slight letter spacing for refinement */
+  color: #FFFFFF;                         /* White color for text */
+  text-transform: uppercase;              /* Optional: Uppercase letters for more class */
+  margin-bottom: 1.5rem;                  /* Margin below headings for spacing */
+  transition: color 0.3s ease;            /* Smooth color transition */
+}
+
+/* Optional: Add hover effect for elegance on headings */
+section h2:hover, section h3:hover {
+  color: #850BC3;                         /* Elegant hover color (purple) */
+
+}
+
+
+
