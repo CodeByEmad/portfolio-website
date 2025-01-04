@@ -315,13 +315,12 @@ const Hero = () => {
                             <a
                                 href={resumeImage}
                                 download="Emad_resume.png"  // Custom name for the file being downloaded
-                                className="flex justify-center border-2 py-3 px-14 lg:px-24 bg-transparent text-white font-semibold rounded-full shadow-md hover:bg-[#850BC3] hover:text-black">
+                                className="flex justify-center items-center border-2 py-3 px-14 lg:px-23 bg-transparent text-white font-semibold rounded-full shadow-md hover:bg-[#850BC3] hover:text-black transition duration-300 whitespace-nowrap">
                                 Download CV
                             </a>
                             <button
                                 onClick={openModal}
-                                className="flex justify-center py-3 px-14 lg:px-24 bg-white text-[#850BC3] font-semibold rounded-full shadow-md border-2 border-[#850BC3] hover:bg-[#850BC3] hover:text-white transition duration-300 ">
-                                {/* className="flex justify-center border py-3 px-14 lg:px-24 bg-transparent text-white font-semibold rounded-full shadow-md hover:bg-[#850BC3] hover:text-black" */}
+                                className="flex justify-center items-center py-3 px-14 lg:px-23 bg-white text-[#850BC3] font-semibold rounded-full shadow-md border-2 border-[#850BC3] hover:bg-[#850BC3] hover:text-white transition duration-300 whitespace-nowrap">
                                 Contact Me
                             </button>
                         </motion.div>
