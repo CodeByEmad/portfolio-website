@@ -7,6 +7,7 @@ import certifications1 from "../assets/certifications/certifications1.png";
 import certifications2 from "../assets/certifications/certifications2.png"
 import certification3 from "../assets/certifications/certification3.jpg"
 
+//demo comment
 export const ABOUT_TEXT = `I'm Emad Mohammed Habibi, a MERN stack developer with expertise in AI, data science, ERP systems, and server management. With cross-cultural experience from India and Saudi Arabia, I build scalable solutions that drive innovation. I lead and serve through Toastmasters and the Hidayah Foundation, blending tech with impact.`;
 
 export const EXPERIENCES = [
