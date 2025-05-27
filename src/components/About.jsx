@@ -134,7 +134,7 @@ const skills = [
 ];
 
 const VISIBLE_COUNT = 3;
-const ITEM_WIDTH = 160;
+const ITEM_WIDTH = window.innerWidth < 640 ? 140 : 160;
 
 const About = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -225,7 +225,7 @@ const About = () => {
           <p className="text-justify text-neutral-300 mb-8">{ABOUT_TEXT}</p>
 
           {/* Skills Carousel */}
-          <div className="relative mt-4 mx-auto overflow-x-hidden w-full sm:w-[480px]">
+          <div className="relative mt-4 mx-auto overflow-x-hidden w-full sm:w-[540px] ">
             <motion.div
               className="flex"
               animate={{ x: -startIndex * ITEM_WIDTH }}
