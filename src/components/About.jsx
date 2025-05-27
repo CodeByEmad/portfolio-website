@@ -123,13 +123,13 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const skills = [
   { name: "Data Science", percentage: 93 },
   { name: "Web Development", percentage: 95 },
-  { name: "Power BI", percentage: 89 },
-  { name: "Software Engineer", percentage: 91 },
-  { name: "UI/UX Design", percentage: 88 },
-  { name: "ERP Systems", percentage: 92 },
-  { name: "Digital Transformations", percentage: 89 },
-  { name: "Support Engineer", percentage: 87 },
-  { name: "Sales", percentage: 91 },
+  { name: "Power BI", percentage: 91 },
+  { name: "Software Engineer", percentage: 94 },
+  { name: "UI/UX Design", percentage: 92 },
+  { name: "ERP Systems", percentage: 89 },
+  { name: "Digital Transformations", percentage: 92 },
+  { name: "Support Engineer", percentage: 91 },
+  { name: "Sales", percentage: 90 },
   { name: "Security Systems", percentage: 86 },
 ];
 
