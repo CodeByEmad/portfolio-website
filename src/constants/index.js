@@ -5,29 +5,44 @@ import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.jpg";
 import certifications1 from "../assets/certifications/certifications1.png";
 import certifications2 from "../assets/certifications/certifications2.png"
+import certification3 from "../assets/certifications/certification3.jpg"
 
-export const ABOUT_TEXT = `I am Emad Mohammed Habibi, a seasoned professional specializing in MERN stack development, artificial intelligence, data science, security systems, and server management. Growing up in a multicultural environment has equipped me with a global perspective and adaptability. My internships in India and Saudi Arabia have honed my expertise in ERP systems, AI, security, and web technologies, enabling me to deliver robust solutions in diverse settings. I am actively involved with Toastmasters and the Hidayah Foundation, demonstrating my commitment to leadership and community engagement. Passionate about innovation, I strive to create impactful solutions that drive transformative growth and efficiency. With a strong foundation in both technical and soft skills, I excel in collaborative, forward-thinking teams.`;
+export const ABOUT_TEXT = `I'm Emad Mohammed Habibi, a MERN stack developer with expertise in AI, data science, security systems, and server management. My multicultural background and internships in India and Saudi Arabia have sharpened my skills in ERP and web technologies. I actively engage in leadership and community work through Toastmasters and the Hidayah Foundation. Passionate about innovation, I thrive in collaborative teams, building impactful solutions that drive growth and efficiency.`;
 
 export const EXPERIENCES = [
   {
+    year: "17 February - 30 April 2025",
+    role: "Software Engineer - Intern",
+    company: "Winman Software LLP",
+    description: `Worked on India’s No.1 Chartered Accountant software suite, Winman CA-ERP. Focused on software testing, debugging, and ensuring quality assurance. Contributed to maintaining high reliability and performance standards.`,
+    technologies: ["Testing & Debugging", "STLC", "SDLCC"],
+  },
+  {
+    year: "16 January - 17 May 2025",
+    role: "Salesforce Developer (Hybrid)",
+    company: "Novigo Solutions",
+    description: `Worked on Salesforce administration and development with a specialization in flows, triggers, automation, Apex, SOQL/SOSL, and front-end technologies such as VF Page, Aura, and LWC.`,
+    technologies: ["Salesforce", "Apex", "Flows","Triggers","LWC"],
+  },
+  {
     year: "20 June - 20 September 2024",
-    role: "Intern",
+    role: "Associate Developer",
     company: "Eftychia Technologies",
-    description: `Contributed to developing and deploying full-stack web applications using MongoDB, React.js, Node.js, and Express APIs. Created and deployed RESTful APIs for efficient data integration. Gained hands-on experience in optimizing web pages for user accessibility. Demonstrated a strong understanding of front-end and back-end technologies to ensure reliable project delivery."`,
-    technologies: ["Javascript", "React.js", "mongoDB", "Express"],
+    description: `Built and deployed full-stack web apps using MongoDB, React.js, Node.js, and Express. Developed RESTful APIs and optimized pages for accessibility. Applied solid front- and back-end skills for smooth, reliable delivery.`,
+    technologies: ["Javascript", "React.js", "mongoDB", "Express","Nodejs"],
   },
   {
     year: "4 January - 4 February 2024",
-    role: "Intern",
+    role: "Sales & Technical Support",
     company: "Al Rushaid Technologies",
-    description: `Explored enterprise resource planning systems, networking, and server management to understand their organizational applications. Contributed to planning and blueprinting processes to ensure project objectives are met. Engaged in security management with blockchain technologies to enhance operational resilience. Developed AI-driven digital solutions to implement innovative approaches for various business functions.`,
-    technologies: ["Enterprise Resource Planning", "Networking", "Server Management", "AI and Digital Solutions", "Blockchain Technologies", "Planning and Blueprinting", "Security Managemnt"],
+    description: `Explored ERP systems, networking, and server management to understand organizational use. Contributed to project planning, security via blockchain, and built AI-driven solutions to boost business innovation.`,
+    technologies: ["ERP","Microsoft Dynamics 365", "Networking", "Server Management", "AI and Digital Solutions", "Blockchain Technologies", "Microsoft Projects", "Security Managemnt"],
   },
   {
     year: "12 February - 13 March 2023",
-    role: "Intern",
+    role: "Frontend Developer Intern",
     company: "Mindstack Technologies",
-    description: `Developed foundational web interfaces using HTML5, CSS, and Bootstrap, enhancing my skills in front-end design. Collaborated with team members to understand the basics of integrating user interfaces with backend components. Focused on implementing responsive layouts, improving the overall user experience and visual appeal for web applications.`,
+    description: `Built responsive web interfaces using HTML5, CSS, and Bootstrap, improving front-end design skills. Collaborated on integrating UI with backend components to enhance user experience and visual appeal.`,
     technologies: ["HTML", "CSS", "Bootstrap"],
   },
 ];
@@ -37,14 +52,14 @@ export const PROJECTS = [
     title: "Genius: Unlock the power of AI",
     image: project1,
     description:
-      "Genius is an AI-powered platform that combines conversation, image, and code generation to bring innovative solutions to life. With OpenAI's GPT-3.5 Turbo for conversational and code generation and DALL·E for image creation, users can unlock endless possibilities. Seamlessly integrated with a user-friendly interface.",
+      "Genius is an AI-powered platform integrating GPT-3.5 Turbo and DALL·E for seamless conversation, code, and image generation. It offers a user-friendly interface to unlock innovative, creative solutions effortlessly.",
     technologies: ["Next.js", "Vercel","React","Clerk","GPT 3.5Turbo","DALL-E"],
   },
   {
     title: "Twitter Clone",
     image: project2,
     description:
-      "Developed a social media app featuring user authentication, post management, and follow recommendations. Built with the MERN stack and Tailwind CSS for responsiveness, using Cloudinary for instant image uploads.",
+      "Developed a social media app with user authentication, post management, and follow suggestions using the MERN stack. Integrated Tailwind CSS for responsive design and Cloudinary for real-time image uploads.",
     technologies: ["MongoDB", "Express", "React", "TailwindCSS", "Cloudinary", "NodeJS"],
   },
   {
@@ -58,7 +73,7 @@ export const PROJECTS = [
     title: "Image Based Recognition and Classification",
     image: project4,
     description:
-      "Developed a deep learning model for high-accuracy classification of cat and dog images using a 4,000-image dataset. Created a real-time face mask detection system with OpenCV, TensorFlow, and Keras, achieving 99.25% accuracy in compliance detection.",
+      "Developed a deep learning model to classify cat and dog images using a 4,000-image dataset. Built a real-time face mask detection system with OpenCV, TensorFlow, and Keras, achieving 99.25% accuracy.",
     technologies: ["Convolutional Neural Network", "OpenCV", "TensorFlow", "Keras"],
   },
   {
@@ -72,10 +87,17 @@ export const PROJECTS = [
 
 export const CERTIFICATIONS = [
   {
+    title: "Microsoft Power BI",
+    image: certification3,
+    description:
+      "Developed hands-on skills in data modeling, transformation, and visualization using Microsoft Power BI. Created interactive dashboards to extract insights and support business decisions.",
+    technologies: ["Data Analysis", "Machine Learning","Databases & SQL for Data Science","Data Science Methodologies"],
+  },
+  {
     title: "IBM Data Science",
     image: certifications2,
     description:
-      "In this Professional Certificate, learners developed hands-on skills in Data Science and Machine Learning, including Python, SQL, and Data Visualization, culminating in a Capstone Project.",
+      "In this Professional Certificate, I developed hands-on skills in Data Science and Machine Learning, including Python, SQL, and Data Visualization, culminating in a Capstone Project.",
     technologies: ["Data Analysis", "Machine Learning","Databases & SQL for Data Science","Data Science Methodologies"],
   },
   {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const WordAnimation = () => {
-  const words = ["Web Development", "Artificial Intelligence Solutions", "Data Science"];
+  const words = ["Web Development", "Artificial Intelligence Solutions", "Data Science","UI/UX","Digital Transformation"];
   const [displayText, setDisplayText] = useState(""); // Holds the current text being typed
   const [currentWordIndex, setCurrentWordIndex] = useState(0); // Tracks the current word being typed
   const [isDeleting, setIsDeleting] = useState(false); // If true, we're deleting
