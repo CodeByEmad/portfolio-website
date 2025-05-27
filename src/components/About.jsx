@@ -225,7 +225,7 @@ const About = () => {
           <p className="text-justify text-neutral-300 mb-8">{ABOUT_TEXT}</p>
 
           {/* Skills Carousel */}
-          <div className="relative mt-4 w-[480px] overflow-hidden mx-auto">
+          <div className="relative mt-4 mx-auto overflow-x-hidden w-full sm:w-[480px]">
             <motion.div
               className="flex"
               animate={{ x: -startIndex * ITEM_WIDTH }}
@@ -235,7 +235,7 @@ const About = () => {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center"
+                  className="flex flex-col items-center flex-shrink-0"
                   style={{ width: ITEM_WIDTH }}
                 >
                   <div className="w-20 h-20 md:w-24 md:h-24 mx-auto">

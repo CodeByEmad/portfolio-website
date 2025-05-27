@@ -12,7 +12,7 @@ export const ABOUT_TEXT = `I'm Emad Mohammed Habibi, a MERN stack developer with
 export const EXPERIENCES = [
   {
     year: "17 February - 30 April 2025",
-    role: "Software Engineer - Intern",
+    role: "Software Engineer",
     company: "Winman Software LLP",
     description: `Worked on India’s No.1 Chartered Accountant software suite, Winman CA-ERP. Focused on software testing, debugging, and ensuring quality assurance. Contributed to maintaining high reliability and performance standards.`,
     technologies: ["Testing & Debugging", "STLC", "SDLCC"],

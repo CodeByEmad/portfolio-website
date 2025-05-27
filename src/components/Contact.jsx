@@ -38,14 +38,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-white py-20 px-4 flex justify-center items-center min-h-screen">
+    <div className="text-white py-10 px-4 sm:py-14 sm:px-6 flex justify-center items-center min-h-screen">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.8 }}
-        className="bg-white text-black rounded-lg shadow-xl p-12 w-full max-w-6xl min-h-[600px]"
+        className="bg-white text-black rounded-2xl shadow-2xl p-6 sm:p-10 md:p-12 w-full max-w-6xl min-h-[500px]"
       >
-        <div className="flex flex-col lg:flex-row gap-10 ">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-10">
           {/* Left Section */}
           <div className="lg:w-1/2 flex flex-col justify-center items-center space-y-2 text-center">
             <h2 className=" text-2xl font-semibold text-black">Let's Connect</h2>
