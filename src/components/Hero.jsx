@@ -103,14 +103,15 @@ const Hero = () => {
                     </div>
                 </div>
 
-                {/* Right section: Image */}
-                <div className="w-full lg:w-1/2 lg:p-8 flex justify-center">
+                <div className="w-full lg:w-1/2 lg:p-8 flex justify-center lg:justify-end lg:pr-28">        
+                <div className="w-[180px] h-[180px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden">
                     <motion.img
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.75 }}
-                        className="brightness-80 rounded-full w-[180px] h-[180px] lg:w-[400px] lg:h-[400px] mt-4 sm:-mt-0"
+                        className="w-full h-full object-cover object-[50%_30%] brightness-80 scale-95"
                         src={profilePic} alt="Emad Habibi" />
+                </div>
                 </div>
             </div>
 

@@ -15,11 +15,11 @@ const FloatingContactBox = ({ showContact }) => {
             +966 508315325
           </a>
         </p>
-        <p className="text-base mb-2">Phone 2: 
+        {/* <p className="text-base mb-2">Phone 2: 
           <a href="tel:+918861576020" className="text-[#FFD700] hover:text-white underline">
             +91 8861576020
           </a>
-        </p>
+        </p> */}
       </div>
     )
   );

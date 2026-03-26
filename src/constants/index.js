@@ -12,35 +12,38 @@ export const ABOUT_TEXT = `I'm Emad Mohammed Habibi, a MERN stack developer with
 
 export const EXPERIENCES = [
   {
-    year: "17 February - 30 April 2025",
+    year: "Jun 2025 - Present",
     role: "Software Engineer",
     company: "Winman Software LLP",
-    description: `Worked on India’s No.1 Chartered Accountant software suite, Winman CA-ERP. Focused on software testing, debugging, and ensuring quality assurance. Contributed to maintaining high reliability and performance standards.`,
-    technologies: ["Testing & Debugging", "STLC", "SDLCC"],
+    description: `Built a high-scale order management system handling 10,000+ daily transactions across delivery platforms (Keeta, Ninja, Toyou). 
+                Developed fault-tolerant pipelines & real-time alerting, eliminating silent failures in production. 
+                Designed multi-POS routing architecture, reducing duplication and improving scalability. 
+                Built real-time dashboards (Angular + WebSockets) for live kitchen and driver tracking. `,
+    technologies: ["PHP (Laravel)", ".NET", "PostgreSQL", "MSSQL","REST APIs","Angular","Real-time Systems"],
   },
+  // {
+  //   year: "16 January - 17 May 2025",
+  //   role: "Salesforce Developer (Hybrid)",
+  //   company: "Novigo Solutions",
+  //   description: `Worked on Salesforce administration and development with a specialization in flows, triggers, automation, Apex, SOQL/SOSL, and front-end technologies such as VF Page, Aura, and LWC.`,
+  //   technologies: ["Salesforce", "Apex", "Flows","Triggers","LWC"],
+  // },
   {
-    year: "16 January - 17 May 2025",
-    role: "Salesforce Developer (Hybrid)",
-    company: "Novigo Solutions",
-    description: `Worked on Salesforce administration and development with a specialization in flows, triggers, automation, Apex, SOQL/SOSL, and front-end technologies such as VF Page, Aura, and LWC.`,
-    technologies: ["Salesforce", "Apex", "Flows","Triggers","LWC"],
-  },
-  {
-    year: "20 June - 20 September 2024",
+    year: "Jun 2024 - Apr 2025",
     role: "Associate Developer",
     company: "Eftychia Technologies",
-    description: `Built and deployed full-stack web apps using MongoDB, React.js, Node.js, and Express. Developed RESTful APIs and optimized pages for accessibility. Applied solid front- and back-end skills for smooth, reliable delivery.`,
+    description: `Build and deployed full-stack applications and optimized backend performance across multiple client projects. Worked on API efficiency, database optimization, and production-level debugging`,
     technologies: ["Javascript", "React.js", "mongoDB", "Express","Nodejs"],
   },
   {
-    year: "4 January - 4 February 2024",
-    role: "Sales & Technical Support",
+    year: "Jan - Feb 2024",
+    role: "Technical Intern",
     company: "Al Rushaid Technologies",
     description: `Explored ERP systems, networking, and server management to understand organizational use. Contributed to project planning, security via blockchain, and built AI-driven solutions to boost business innovation.`,
     technologies: ["ERP","Microsoft Dynamics 365", "Networking", "Server Management", "AI and Digital Solutions", "Blockchain Technologies", "Microsoft Projects", "Security Managemnt"],
   },
   {
-    year: "12 February - 13 March 2023",
+    year: " Feb -  Mar 2023",
     role: "Frontend Developer Intern",
     company: "Mindstack Technologies",
     description: `Built responsive web interfaces using HTML5, CSS, and Bootstrap, improving front-end design skills. Collaborated on integrating UI with backend components to enhance user experience and visual appeal.`,

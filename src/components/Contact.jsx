@@ -20,10 +20,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.send(
-      'service_dv2jwwk',       // Replace with your actual service ID
-      'template_ms1nv8s',      // Replace with your actual template ID
+      'service_dv2jwwk',       // service ID
+      'template_ms1nv8s',      //  template ID
       formData,
-      '3KpsxC5N-D2f9NuCx'           // Replace with your actual public API key
+      '3KpsxC5N-D2f9NuCx'           //  public API key
     ).then(
       (result) => {
         console.log('Email successfully sent!');
@@ -63,9 +63,9 @@ const Contact = () => {
               <p>
                 📞 <a href="tel:+966508315325" className="underline">+966 508315325</a>
               </p>
-              <p>
+              {/* <p>
                 📞 <a href="tel:+918861576020" className="underline">+91 8861576020</a>
-              </p>
+              </p> */}
             </div>
           </div>
 
