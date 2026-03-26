@@ -13,8 +13,8 @@ export const ABOUT_TEXT = `I'm Emad Mohammed Habibi, a MERN stack developer with
 export const EXPERIENCES = [
   {
     year: "Jun 2025 - Present",
-    role: "Software Engineer",
-    company: "Winman Software LLP",
+    role: "Full Stack Developer",
+    company: "Anan AlSamaa IT Solutions | Damam, Saudi Arabia",
     description: `Built a high-scale order management system handling 10,000+ daily transactions across delivery platforms (Keeta, Ninja, Toyou). 
                 Developed fault-tolerant pipelines & real-time alerting, eliminating silent failures in production. 
                 Designed multi-POS routing architecture, reducing duplication and improving scalability. 
