@@ -1,48 +1,76 @@
 import { PROJECTS } from "../constants";
-import { motion } from "framer-motion";
-//test_com
+import { FaGithub } from "react-icons/fa";
+import { HiArrowUpRight } from "react-icons/hi2";
+import SpotlightCard from "./SpotlightCard";
+import SectionHeader from "./SectionHeader";
 
 const Projects = () => {
     return (
         <div className="border-b border-neutral-900 pb-4">
-            <motion.h2 
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl">Projects</motion.h2>
-            <div>
+            <SectionHeader index="04" eyebrow="builds" title="Projects" />
+
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
                 {PROJECTS.map((project, index) => (
-                    <div key={index} className="mb-8 flex flex-wrap justify-center text-center sm:justify-center sm:text-left lg:justify-center" >
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full lg:w-1/4 flex justify-center lg:justify-start">
+                    <SpotlightCard key={index} className="h-full">
+                        {/* Image banner */}
+                        <div className="relative flex h-[200px] w-full items-center justify-center overflow-hidden border-b border-neutral-800 bg-neutral-950/50 p-3">
+                            {project.demo && (
+                                <span className="absolute right-3 top-3 z-10 inline-flex items-center gap-1.5 rounded-full border border-green-500/30 bg-green-950/40 px-2.5 py-1 text-xs font-medium text-green-300 backdrop-blur">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                                        <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                                    </span>
+                                    Live
+                                </span>
+                            )}
                             <img
                                 src={project.image}
-                                width={200}
-                                height={200}
                                 alt={project.title}
-                                className="mb-6 rounded"
+                                loading="lazy"
+                                className="max-h-full max-w-full rounded-lg object-contain transition-transform duration-500 group-hover/spot:scale-105"
                             />
-                        </motion.div>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1 }} className="w-full max-w-xl text-center sm:text-left lg:w-3/4">
-                            <h6 className="mb-2 font-semibold">{project.title}</h6>
-                            <p className="mb-4 text-neutral-400 text-justify">{project.description}</p>
-                            <div className="flex flex-wrap">
-                                {project.technologies.map((tech, index) => (
+                        </div>
+
+                        {/* Body */}
+                        <div className="flex flex-1 flex-col p-6">
+                            <h3 className="mb-2 text-lg font-semibold text-white">{project.title}</h3>
+                            <p className="mb-4 flex-1 text-neutral-400">{project.description}</p>
+                            <div className="flex flex-wrap gap-2">
+                                {project.technologies.map((tech, i) => (
                                     <span
-                                        key={index}
-                                        className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900">
+                                        key={i}
+                                        className="rounded-md border border-neutral-800 bg-neutral-900/60 px-2.5 py-1 font-mono text-xs text-neutral-300"
+                                    >
                                         {tech}
                                     </span>
                                 ))}
                             </div>
-                        </motion.div>
-                    </div>
+                            <div className="mt-5 flex flex-wrap gap-3">
+                                {project.demo && (
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-violet-950/40 transition-all duration-300 hover:bg-violet-500 active:scale-[0.98]"
+                                    >
+                                        <HiArrowUpRight size={16} />
+                                        Live Demo
+                                    </a>
+                                )}
+                                {project.github && (
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 rounded-lg border border-neutral-700 px-4 py-2 text-sm font-medium text-neutral-200 transition-all duration-300 hover:border-violet-500 hover:bg-white/5 hover:text-white active:scale-[0.98]"
+                                    >
+                                        <FaGithub size={16} />
+                                        View Code
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    </SpotlightCard>
                 ))}
             </div>
         </div>

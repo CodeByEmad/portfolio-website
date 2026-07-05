@@ -2,9 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emad Habibi</title>
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Favicons & PWA -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preload the LCP hero image so it downloads before JS executes -->
+    <link rel="preload" as="image" href="/ProfilePic-emad.jpg" fetchpriority="high" />
+
+    <!-- Fonts (preconnect + non-render-blocking load) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      />
+    </noscript>
+
+    <title>Emad Mohammed Habibi · Full Stack Developer (.NET & React)</title>
+    <meta
+      name="description"
+      content="Backend-leaning full-stack developer building fault-tolerant .NET / ASP.NET Core services and REST APIs processing 20,000+ daily orders, with React + TypeScript frontends. Based in Dammam, Saudi Arabia."
+    />
+    <meta name="author" content="Emad Mohammed Habibi" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Emad Mohammed Habibi · Full Stack Developer (.NET & React)" />
+    <meta
+      property="og:description"
+      content="Backend-leaning full-stack developer: fault-tolerant .NET / ASP.NET Core services processing 20,000+ daily orders, React + TypeScript frontends."
+    />
+    <meta property="og:image" content="/EMHLogo.png" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Emad Mohammed Habibi · Full Stack Developer (.NET & React)" />
+    <meta
+      name="twitter:description"
+      content="Backend-leaning full-stack developer: fault-tolerant .NET / ASP.NET Core services processing 20,000+ daily orders, React + TypeScript frontends."
+    />
+    <meta name="twitter:image" content="/EMHLogo.png" />
+
+    <!-- Structured data for rich search results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emad Mohammed Habibi",
+        "jobTitle": "Full Stack Developer",
+        "email": "mailto:emadyanbu@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dammam",
+          "addressCountry": "Saudi Arabia"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Anan Alsamaa IT Solutions"
+        },
+        "knowsAbout": [
+          "C#",
+          ".NET",
+          "ASP.NET Core",
+          "Entity Framework Core",
+          "React",
+          "TypeScript",
+          "Laravel",
+          "PostgreSQL",
+          "MSSQL",
+          "WebSockets",
+          "REST APIs",
+          "Docker",
+          "AWS"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/emad-mohammed-habibi-051b28233/",
+          "https://github.com/CodeByEmad",
+          "https://x.com/EmadHabibi10"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -16,9 +16,6 @@ export default [
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
       },
-      'extends':[
-        'plugin:react/recommended'
-      ]
     },
     settings: { react: { version: '18.3' } },
     plugins: {
@@ -32,6 +29,8 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      // This project intentionally doesn't use PropTypes or TypeScript.
+      'react/prop-types': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Fonts are loaded via <link> in index.html (non-render-blocking). */
 
 @tailwind base;
 @tailwind components;
@@ -6,62 +6,158 @@
 
 :root {
   font-family: "Inter", sans-serif;
+
+  /* Single disciplined accent — violet, matching the EMH logo */
+  --accent: #8b5cf6;
+  --accent-bright: #a78bfa;
+  --accent-deep: #7c3aed;
 }
 
-
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Adjust for navbar height if needed */
+  scroll-padding-top: 80px; /* offset for the fixed navbar */
 }
 
-/* Center the sections vertically when scrolling to them */
+/* Visible keyboard focus ring across all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+body {
+  background-color: #0a0a0c; /* prevents white flash before React mounts */
+}
+
+/* Consistent vertical rhythm between sections */
 section {
-  scroll-margin-top: 0px; /* Adjust to ensure the section is centered after scroll */
+  scroll-margin-top: 0px;
+  padding-top: 48px;
+  padding-bottom: 96px;
 }
 
-/* Add some spacing between each section */
-section {
-  padding-top: 50px; /* Optional: Adjust to your liking for spacing between sections */
-  padding-bottom: 80px; /* Optional: Adjust to your liking for spacing between sections */
-}
-
-
-
-/* Navbar link styling for a classy, luxurious look */
 nav a {
-  font-family: 'Playfair Display', serif;  /* Change to classy font */
-  font-weight: 300;                       /* A bolder font weight for elegance */
-  font-size: 1.3rem;                        /* Smaller font size */
-  letter-spacing: 2px;                    /* Add slight letter spacing for refinement */
-  color: #FFFFFF;                         /* White color for text */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  letter-spacing: 0.2px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav a:hover {
-  color: #F4A300;  /* Gold color on hover for a luxurious feel */
-  transform: translateY(-3px);  /* Slight hover effect for sophistication */
+/* ---------------------------------------------------------------
+   Headings — Space Grotesk, heavy and tight. Layout (alignment,
+   eyebrow labels) is owned by the SectionHeader component.
+---------------------------------------------------------------- */
+section h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-wrap: balance;
 }
 
-
-/* Apply Playfair Display font to section headings for a luxurious feel */
-section h2, section h3 {
-  font-family: 'Playfair Display', serif;  /* Classy font for section headings */
-  font-weight: 100;                       /* Lighter weight for elegance */
-  font-size: 2rem;                        /* Adjusted font size for better section title visibility */
-  letter-spacing: 1.5px;                  /* Slight letter spacing for refinement */
-  color: #FFFFFF;                         /* White color for text */
-  text-transform: uppercase;              /* Optional: Uppercase letters for more class */
-  margin-bottom: 1.5rem;                  /* Margin below headings for spacing */
-  transition: color 0.3s ease;            /* Smooth color transition */
+section h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #ffffff;
 }
 
-/* Optional: Add hover effect for elegance on headings */
-section h2:hover, section h3:hover {
-  color: #850BC3;                         /* Elegant hover color (purple) */
-
+/* ---------------------------------------------------------------
+   Film grain — a fixed noise overlay that breaks digital flatness.
+   Pure SVG data-URI, zero network cost, pointer-events off.
+---------------------------------------------------------------- */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* ---------------------------------------------------------------
+   GPU-friendly decorative animations (run on the compositor thread,
+   not the main thread — keeps Total Blocking Time low).
+---------------------------------------------------------------- */
+@keyframes float {
+  0%, 100% { transform: translateY(8px); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float ease-in-out infinite;
+  will-change: transform;
+}
 
+@keyframes aurora-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(80px, 40px) scale(1.15); }
+}
+@keyframes aurora-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-90px, -50px) scale(1.2); }
+}
+.animate-aurora-1 { animation: aurora-1 18s ease-in-out infinite; will-change: transform; }
+.animate-aurora-2 { animation: aurora-2 22s ease-in-out infinite; will-change: transform; }
 
+/* ---------------------------------------------------------------
+   Shine sweep — a light highlight that sweeps across on hover.
+   Add the `shine` class to any (relatively positioned) button.
+---------------------------------------------------------------- */
+.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.shine:hover::after {
+  left: 150%;
+}
+
+/* ---------------------------------------------------------------
+   Custom scrollbar to match the dark + violet theme
+---------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2e;
+  border-radius: 999px;
+  border: 2px solid #0a0a0c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Firefox */
+* {
+  scrollbar-color: #2a2a2e #0a0a0c;
+}
+
+/* ---------------------------------------------------------------
+   Respect users who prefer reduced motion
+---------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

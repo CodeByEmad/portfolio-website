@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0d0d12"/>
+  <rect x="8" y="8" width="784" height="484" rx="14" fill="none" stroke="#27272e" stroke-width="2"/>
+
+  <!-- Microsoft logo -->
+  <g transform="translate(80,120)">
+    <rect x="0" y="0" width="56" height="56" fill="#f25022"/>
+    <rect x="64" y="0" width="56" height="56" fill="#7fba00"/>
+    <rect x="0" y="64" width="56" height="56" fill="#00a4ef"/>
+    <rect x="64" y="64" width="56" height="56" fill="#ffb900"/>
+  </g>
+  <text x="224" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="40" font-weight="600" fill="#d4d4d8">Microsoft</text>
+
+  <text x="80" y="308" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Full-Stack Developer</text>
+  <text x="80" y="352" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#8a8a94">Professional Certificate</text>
+
+  <g>
+    <rect x="80" y="392" width="150" height="36" rx="6" fill="none" stroke="#8b5cf6"/>
+    <text x="103" y="416" font-family="Consolas, 'Courier New', monospace" font-size="16" fill="#a78bfa">in progress</text>
+  </g>
+
+  <text x="80" y="470" font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#6b6b74">ASP.NET Core · EF Core · Identity · Blazor · Azure</text>
+</svg>

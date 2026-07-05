@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
+const words = ["ASP.NET Core & C#", "EF Core & MSSQL", "React & TypeScript", "Laravel & PostgreSQL", "REST APIs & JWT", "WebSockets & Real-time", "Docker & AWS"];
+
 const WordAnimation = () => {
-  const words = ["Full Stack Developer", "PHP (Laravel) and C#", "Data Science",".NET and Angular","MS SQL Server","HTML CSS", "Javascript and React", "Git and REST APIs"];
   const [displayText, setDisplayText] = useState(""); // Holds the current text being typed
   const [currentWordIndex, setCurrentWordIndex] = useState(0); // Tracks the current word being typed
   const [isDeleting, setIsDeleting] = useState(false); // If true, we're deleting
@@ -54,14 +55,15 @@ const WordAnimation = () => {
   }, [displayText, isDeleting, currentWordIndex, typingSpeed]);
 
   return (
-    <div className="flex flex-col items-center">
-      <span
-        className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl font-thin tracking-tight text-transparent mt-32"
-        style={{ minHeight: "50px" }} // Consistent space
-      >
+    // Decorative, constantly-changing text — hidden from screen readers
+    // (the static intro paragraph already conveys the role).
+    <span className="inline-flex items-center font-mono text-sm lg:text-base" aria-hidden="true">
+      <span className="mr-2 text-violet-500/70">&gt;</span>
+      <span className="tracking-tight text-violet-300">
         {displayText}
       </span>
-    </div>
+      <span className="ml-1 inline-block h-[1.1em] w-[2px] animate-pulse bg-violet-400" />
+    </span>
   );
 };
 

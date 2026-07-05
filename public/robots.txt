@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update the domain below once deployed, then keep sitemap.xml in sync.
+Sitemap: https://emadhabibi.com/sitemap.xml
